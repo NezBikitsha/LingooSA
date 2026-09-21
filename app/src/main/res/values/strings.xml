@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Lingo SA</string>
+    <string name="login">Sign In</string>
+    <string name="register">Sign Up</string>
+    <string name="email">Email Address</string>
+    <string name="password">Password</string>
+    <string name="full_name">Full Name</string>
+    <string name="username">Username</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="hello_world">Hello World!</string>
+</resources>
