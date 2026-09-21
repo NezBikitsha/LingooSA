@@ -1,6 +1,6 @@
-# 🇿🇦 Lingo SA
+Lingo SA
 
-## 📱 Project Overview
+Project Overview
 
 **Lingo SA** is an innovative Android mobile application designed to help South Africans learn the country's official languages and connect with people from different cultural backgrounds. The app combines structured, gamified learning modules with a social platform for real-time practice, creating an ecosystem for authentic language and cultural exchange.
 
