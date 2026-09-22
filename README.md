@@ -41,23 +41,6 @@ Key Features
 
 ---
 
-
-## 🎥 Demo Video
-
-Watch the full demonstration of all app features:
-
-🎥 **[Lingo SA Demo Video](https://www.youtube.com/watch?v=YOUR_VIDEO_LINK)**
-
-*The video includes:*
-- Registration & Login with encrypted passwords
-- Profile & Settings management
-- Learning module browsing
-- REST API connectivity demonstration
-- Database verification showing stored data
-- Error handling for invalid inputs
-
----
-
  Technical Architecture
 
 Technology Stack
@@ -75,4 +58,3 @@ Technology Stack
 | **Testing** | JUnit, MockK, Espresso | Comprehensive testing framework |
 | **CI/CD** | GitHub Actions | Automated build and test pipeline |
 
-### Architecture Diagram
