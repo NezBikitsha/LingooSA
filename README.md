@@ -8,7 +8,7 @@ South Africa has 11 official languages, yet many South Africans only speak one o
 
 ---
 
-## 🎯 Purpose
+Purpose
 
 The primary purpose of Lingo SA is to:
 
@@ -19,40 +19,27 @@ The primary purpose of Lingo SA is to:
 
 ---
 
-## ✨ Key Features
+Key Features
 
 | Feature | Status | Description |
-**User Authentication** | ✅ Complete | Secure registration & login with encrypted passwords (bcrypt) |
-| 📝 **User Profile** | ✅ Complete | Customisable settings, bio, and language preferences |
-| 📚 **Learning Modules** | ✅ Complete | Curated language content with "Learn Local" focus |
-| 🌐 **REST API Integration** | ✅ Complete | Backend API with Django REST Framework |
-| 🔒 **Password Encryption** | ✅ Complete | Passwords hashed using bcrypt on the backend |
-| 🎨 **Material Design UI** | ✅ Complete | Modern, intuitive user interface |
-| ⚠️ **Error Handling** | ✅ Complete | Graceful handling of invalid inputs and network errors |
-| 📊 **Logging** | ✅ Complete | Comprehensive logging throughout the app |
-| 🧪 **Unit Testing** | ✅ Complete | Automated tests with JUnit & MockK |
-| 🔄 **CI/CD** | ✅ Complete | GitHub Actions for automated builds and tests |
-| 📱 **Demo Video** | ✅ Complete | Full walkthrough of app features |
-| ⏰ **Offline Mode** | 🚧 Planned (PoE) | Full sync capability with Room DB |
-| 🔔 **Notifications** | 🚧 Planned (PoE) | Real-time push notifications via FCM |
-| 🌍 **Multi-language** | 🚧 Planned (PoE) | isiZulu & Afrikaans UI support |
-| 🔑 **SSO** | 🚧 Planned (PoE) | Google Sign-In integration |
+**User Authentication** | Complete | Secure registration & login with encrypted passwords (bcrypt) |
+|  **User Profile** | Complete | Customisable settings, bio, and language preferences |
+|  **Learning Modules** |  Complete | Curated language content with "Learn Local" focus |
+|  **REST API Integration** | Complete | Backend API with Django REST Framework |
+|  **Password Encryption** | Complete | Passwords hashed using bcrypt on the backend |
+|  **Material Design UI** | Complete | Modern, intuitive user interface |
+|  **Error Handling** | Complete | Graceful handling of invalid inputs and network errors |
+|  **Logging** | Complete | Comprehensive logging throughout the app |
+|  **Unit Testing** | Complete | Automated tests with JUnit & MockK |
+|  **CI/CD** | Complete | GitHub Actions for automated builds and tests |
+|  **Demo Video** | Complete | Full walkthrough of app features |
+|  **Offline Mode** | Planned (PoE) | Full sync capability with Room DB |
+|  **Notifications** | Planned (PoE) | Real-time push notifications via FCM |
+|  **Multi-language** | Planned (PoE) | isiZulu & Afrikaans UI support |
+|  **SSO** | Planned (PoE) | Google Sign-In integration |
 
 ---
 
-## 📸 Screenshots
-
-| Login Screen | Dashboard | Learning Module |
-|:---:|:---:|:---:|
-| ![Login](screenshots/login.png) | ![Dashboard](screenshots/dashboard.png) | ![Learn](screenshots/learn.png) |
-
-| Settings | Registration | Error Handling |
-|:---:|:---:|:---:|
-| ![Settings](screenshots/settings.png) | ![Register](screenshots/register.png) | ![Error](screenshots/error.png) |
-
-> **Note:** Add your own screenshots to the `screenshots/` folder in the repository.
-
----
 
 ## 🎥 Demo Video
 
@@ -70,9 +57,9 @@ Watch the full demonstration of all app features:
 
 ---
 
-## 🛠️ Technical Architecture
+ Technical Architecture
 
-### Technology Stack
+Technology Stack
 
 | Component | Technology | Justification |
 |-----------|------------|---------------|
