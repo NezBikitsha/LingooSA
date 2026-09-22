@@ -22,6 +22,7 @@ The primary purpose of Lingo SA is to:
 Key Features
 
 | Feature | Status | Description |
+|-----------|------------|---------------|
 **User Authentication** | Complete | Secure registration & login with encrypted passwords (bcrypt) |
 |  **User Profile** | Complete | Customisable settings, bio, and language preferences |
 |  **Learning Modules** |  Complete | Curated language content with "Learn Local" focus |
