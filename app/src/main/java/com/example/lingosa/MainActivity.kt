@@ -42,6 +42,19 @@ class MainActivity : AppCompatActivity() {
             Log.d(TAG, "User is not logged in, navigating to Login")
             startActivity(Intent(this, AuthActivity::class.kclass))
         }
+        fun scheduleSync(context: Context) {
+    val constraints = Constraints.Builder()
+        .setRequiredNetworkType(NetworkType.CONNECTED) // Only run when online
+        .build()
+
+    val syncRequest = PeriodicWorkRequestBuilder<SyncWorker>(15, TimeUnit.MINUTES)
+        .setConstraints(constraints)
+        .build()
+
+    WorkManager.getInstance(context).enqueueUniquePeriodicWork(
+        "LingoSyncWork", ExistingPeriodicWorkPolicy.KEEP, syncRequest
+    )
+}
 
         finish()
     }
