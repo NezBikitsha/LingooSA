@@ -10,50 +10,56 @@ South Africa has 11 official languages, yet many South Africans only speak one o
 
 Purpose
 
-The primary purpose of Lingo SA is to:
+1. Purpose of the App
+Lingo SA is a mobile application designed to bridge the gap between language learning and social connection, specifically tailored to the diverse South African context. The app aims to help South Africans learn the country's official languages (isiZulu and Afrikaans) and connect with people from different cultural backgrounds. It combines structured, gamified learning modules with a social platform for real-time practice, creating an ecosystem for authentic language and cultural exchange.
 
-- **Bridge the language gap** by providing accessible, culturally-relevant language learning modules
-- **Foster cultural understanding** through authentic connections with native speakers
-- **Celebrate diversity** by showcasing the rich linguistic heritage of South Africa
-- **Make learning practical** with real-world scenarios like "Ordering at a Shisanyama"
+2. Design Considerations & Architecture
+Architecture: The app strictly follows the MVVM (Model-View-ViewModel) architecture to ensure a clean separation of UI and business logic.
 
----
+Local Storage: Room Database is used for caching data and handling offline capabilities.
 
-Key Features
+Network: Retrofit is used to connect to a custom-hosted Django REST API.
 
-| Feature | Status | Description |
-|-----------|------------|---------------|
-**User Authentication** | Complete | Secure registration & login with encrypted passwords (bcrypt) |
-|  **User Profile** | Complete | Customisable settings, bio, and language preferences |
-|  **Learning Modules** |  Complete | Curated language content with "Learn Local" focus |
-|  **REST API Integration** | Complete | Backend API with Django REST Framework |
-|  **Password Encryption** | Complete | Passwords hashed using bcrypt on the backend |
-|  **Material Design UI** | Complete | Modern, intuitive user interface |
-|  **Error Handling** | Complete | Graceful handling of invalid inputs and network errors |
-|  **Logging** | Complete | Comprehensive logging throughout the app |
-|  **Unit Testing** | Complete | Automated tests with JUnit & MockK |
-|  **CI/CD** | Complete | GitHub Actions for automated builds and tests |
-|  **Demo Video** | Complete | Full walkthrough of app features |
-|  **Offline Mode** | Planned (PoE) | Full sync capability with Room DB |
-|  **Notifications** | Planned (PoE) | Real-time push notifications via FCM |
-|  **Multi-language** | Planned (PoE) | isiZulu & Afrikaans UI support |
-|  **SSO** | Planned (PoE) | Google Sign-In integration |
+UI/UX: Built using Material Design 3. The app features robust input validation (via TextInputLayout) to handle invalid user inputs gracefully without crashing, utilizing Snackbars for user feedback.
 
----
+Security: User authentication is secure. Passwords are hashed on the backend (Django) using bcrypt, and the app utilizes JSON Web Tokens (JWT) for secure API communication over HTTPS.
 
- Technical Architecture
+3. Utilisation of GitHub and GitHub Actions
+GitHub: The repository was initialized with this README.md file. Regular commits were made throughout the development lifecycle to track progress and maintain version control.
 
-Technology Stack
+GitHub Actions: A CI/CD pipeline was implemented via a build.yml file located in .github/workflows/. This action automatically triggers on every push to the main branch. It sets up the Java environment, builds the Kotlin application, and runs the automated unit tests to ensure the code is stable and functional on environments other than my local machine.
 
-| Component | Technology | Justification |
-|-----------|------------|---------------|
-| **Language** | Kotlin | Modern, concise, official Android language |
-| **UI Framework** | XML + Material Design | Robust, well-supported UI framework |
-| **Architecture** | MVVM + Repository Pattern | Clean separation of concerns, testable |
-| **Local Database** | Room (SQLite) | Type-safe database abstraction |
-| **Network** | Retrofit + OkHttp | Industry-standard HTTP client |
-| **Authentication** | JWT (Django Simple JWT) | Secure, stateless authentication |
-| **Backend** | Django REST Framework | Rapid API development with Python |
+4. Innovative Features (Added in Final Version)
+As per the Part 1 planning, the following features have been successfully integrated into the final version:
+
+Learn Local Modules: Culturally relevant lessons (e.g., "Ordering at a Shisanyama").
+
+CultureConnect Badges: Gamified achievements for engaging with cultural content.
+
+5. Release Notes (v2.0 - Final POE)
+This section details all updates made since the initial Part 2 prototype.
+
+New PoE Features Implemented:
+
+Single Sign-On (SSO): Integrated Google Sign-In via Firebase Authentication for frictionless onboarding.
+
+Offline Mode with Sync: Users can now complete lessons while offline. Actions are saved to RoomDB and automatically synced to the Django REST API via WorkManager when the device reconnects to the internet.
+
+Real-time Notifications: Integrated Firebase Cloud Messaging (FCM) to send push notifications to users for real-time updates and alerts.
+
+Multi-language Support: Full localization of the UI for English, isiZulu (
+zu
+), and Afrikaans (
+af
+). The app automatically adjusts to the device's language settings.
+
+Improvements & Fixes:
+
+App Icon & Assets: Added a custom adaptive app icon (dialogue bubble forming the SA map) and final UI image assets.
+
+Error Handling: Fixed crashes related to invalid inputs on the Registration and Login screens.
+
+Logging & Comments: Added comprehensive Log.d() statements throughout the codebase for debugging and added inline comments explaining complex logic (e.g., the SyncWorker).|
 | **Database** | PostgreSQL | Reliable, scalable relational database |
 | **Testing** | JUnit, MockK, Espresso | Comprehensive testing framework |
 | **CI/CD** | GitHub Actions | Automated build and test pipeline |
